@@ -44,21 +44,21 @@ function weatherShowFn(data) {
 
 	$('#weather-info').fadeIn();
 
-	const quotes = [
-	"The best way to predict the future is to create it.",
-	"Success is not final, failure is not fatal: It is the courage to continue that counts.",
-	"Believe you can and you're halfway there.",
-	"Don't watch the clock; do what it does. Keep going.",
-	"The only limit to our realization of tomorrow is our doubts of today."
-];	
-function displayRandomQuote() {
-	const randomIndex = Math.floor(Math.random() * quotes.length);
-	const randomQuote = quotes[randomIndex];
-	$('#quote').text(randomQuote);
-}
-displayRandomQuote();
-setInterval(displayRandomQuote, 10000); // Change quote every 10 seconds
+	const quoteElement = document.getElementById('quotes');
+const quotes = [
+	"“The best way to predict the future is to create it.” – Peter Drucker",
+	"“Success usually comes to those who are too busy to be looking for it.” – Henry David Thoreau",
+	"“Don't watch the clock; do what it does. Keep going.” – Sam Levenson",
+	"“The harder you work for something, the greater you'll feel when you achieve it.” – Unknown",
+	"“Dream bigger. Do bigger.” – Unknown",
+	"“Don't stop when you're tired. Stop when you're done.” – Marilyn Monroe",
+	"“Little things make big days.” – Unknown",
+	"“It's going to be hard, but hard does not mean impossible.” – Unknown",
+	"“Push yourself, because no one else is going to do it for you.” – Unknown",
+	"“Great things never come from comfort zones.” – Unknown"
+];
+const randomIndex = Math.floor(Math.random() * quotes.length);
+quoteElement.innerText = quotes[randomIndex];
 
-}
 
 
