@@ -45,7 +45,28 @@ function weatherShowFn(data) {
 	$('#weather-info').fadeIn();
 
 }
+const quoteElement = document.getElementById('quotes');
+const quotes = [
+	"“The best way to predict the future is to create it.” – Peter Drucker",
+	"“Success usually comes to those who are too busy to be looking for it.” – Henry David Thoreau",
+	"“Don't watch the clock; do what it does. Keep going.” – Sam Levenson",
+	"“The harder you work for something, the greater you'll feel when you achieve it.” – Unknown",
+	"“Dream bigger. Do bigger.” – Unknown",
+	"“Don't stop when you're tired. Stop when you're done.” – Marilyn Monroe",
+	"“Little things make big days.” – Unknown",
+	"“It's going to be hard, but hard does not mean impossible.” – Unknown",
+	"“Push yourself, because no one else is going to do it for you.” – Unknown",
+	"“Great things never come from comfort zones.” – Unknown"
+];
+const randomIndex = Math.floor(Math.random() * quotes.length);
+quoteElement.textContent = quotes[randomIndex];
 
+function refreshQuote() {
+	const randomIndex = Math.floor(Math.random() * quotes.length);
+	quoteElement.textContent = quotes[randomIndex];
+}
+
+setInterval(refreshQuote, 10000); // Refresh quote every 10 seconds	
 
 
 
