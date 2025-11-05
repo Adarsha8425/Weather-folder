@@ -58,7 +58,8 @@ const quotes = [
 	"“Great things never come from comfort zones.” – Unknown"
 ];
 const randomIndex = Math.floor(Math.random() * quotes.length);
-quoteElement.innerText = quotes[randomIndex];
+quoteElement.textContent = quotes[randomIndex];
+
 
 
 
