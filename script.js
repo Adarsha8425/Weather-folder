@@ -43,4 +43,19 @@ function weatherShowFn(data) {
 });
 
 	$('#weather-info').fadeIn();
+
 }
+const quotes = [
+	"The best way to predict the future is to create it.",
+	"Success is not final, failure is not fatal: It is the courage to continue that counts.",
+	"Believe you can and you're halfway there.",
+	"Don't watch the clock; do what it does. Keep going.",
+	"The only limit to our realization of tomorrow is our doubts of today."
+];	
+function displayRandomQuote() {
+	const randomIndex = Math.floor(Math.random() * quotes.length);
+	const randomQuote = quotes[randomIndex];
+	$('#quote').text(randomQuote);
+}
+displayRandomQuote();
+setInterval(displayRandomQuote, 10000); // Change quote every 10 seconds
