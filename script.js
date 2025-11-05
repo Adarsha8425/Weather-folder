@@ -60,6 +60,16 @@ const quotes = [
 const randomIndex = Math.floor(Math.random() * quotes.length);
 quoteElement.textContent = quotes[randomIndex];
 
+	function refreshQuote() {
+	const randomIndex = Math.floor(Math.random() * quotes.length);
+	quoteElement.textContent = quotes[randomIndex];
+}
+setInterval(refreshQuote, 60000); // Refresh quote every 60 seconds
+
+}
+
+
+
 
 
 
