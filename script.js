@@ -66,8 +66,9 @@ function refreshQuote() {
 	quoteElement.textContent = quotes[randomIndex];
 }
 
-setInterval(refreshQuote, 20000); // Refresh quote every 10 seconds	
+setInterval(refreshQuote, 10000); // Refresh quote every 10 seconds	
 refreshQuote(); // Initial call to display a quote immediately
+
 
 
 
